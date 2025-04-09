@@ -52,7 +52,7 @@ int pop(Stack *stack) {
 int peek(Stack *stack){
   if(isEmpty(stack)){
     printf("Error: Stack empty\n");
-    return;
+    return 0;
   }
 
   return stack->content[stack->top];
