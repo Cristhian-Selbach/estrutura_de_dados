@@ -32,20 +32,48 @@ void push(Stack *stack, int value){
   printf("stacked: %d\n", value);
 }
 
-void pop(Stack *stack) {
+int pop(Stack *stack) {
   if (isEmpty(stack)){
     printf("Error: Stack Underflow\n");
+    return 0;
   }
 
-  return stack->content[stack->top--]; //Decrementa o topo e retorna o valor que foi removido
-  
+  // Decrementa o topo e retorna o valor que foi removido
+
+  int value = stack->content[stack->top]; 
+  stack->top--;
+  printf("poped: %d\n", value);
+  return value;
+
   // é o mesmo que:
-  // int valor = stack->elementos[stack->top]; 
-  // stack->top--;
-  // return valor;
+  // return stack->content[stack->top--])
+}
+
+int peek(Stack *stack){
+  if(isEmpty(stack)){
+    printf("Error: Stack empty\n");
+    return;
+  }
+
+  return stack->content[stack->top];
 }
 
 int main(){
-  printf("hello");
+  Stack myStack;
+
+  initialize(&myStack);
+  push(&myStack, 10);
+  push(&myStack, 20);
+  push(&myStack, 30);
+
+  pop(&myStack);
+  pop(&myStack);
+
+  peek(&myStack);
+
+  pop(&myStack);
+
+  peek(&myStack);
+
   return 0;
 }
