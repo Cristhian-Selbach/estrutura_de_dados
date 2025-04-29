@@ -45,10 +45,10 @@ int dequeue(Queue *queue){
   return aux;
 }
 
-int peek(Queue *queue) {
+void peek(Queue *queue) {
   if (isEmpty(queue)) {
     printf("Queue is empty!\n");
-    return -1;
+    return;
   }
   printf("Queue: ");
   for (int i = queue->front; i <= queue->rear; i++) {
@@ -71,7 +71,7 @@ int main() {
   printf("Removed: %d\n", dequeue(&myQueue));
   printf("Removed: %d\n", dequeue(&myQueue));
   printf("Removed: %d\n", dequeue(&myQueue));
-  
+
   peek(&myQueue);
 
   return 0;
