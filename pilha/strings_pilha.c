@@ -69,16 +69,16 @@ int main(){
   int option;
   do
   {
-    printf("\n\nSelect one:\n1 - Add Product\n2 - Remove Product\n3 - Show Stack\n4 - Exit\n");
+    printf("\n\nSelect one:\n1 - Add Product\n2 - Remove Product\n3 - Show Stack\n4 - Exit\n\n");
     scanf("%d", &option);
 
     if(option == 1){
       Product product;
 
-      printf("\n\ncode:");
+      printf("\ncode: ");
       scanf("%d", &product.code);
       getchar(); // limpa o \n
-      printf("\ndescription:\n");
+      printf("description: ");
       fgets(product.description, 50, stdin);
 
       push(&stack, product);
@@ -86,6 +86,7 @@ int main(){
     } else if (option == 2){
       pop(&stack);
     } else if (option == 3){
+      printf("\nstack: \n");
       show(stack);
     }
   } while (option != 4);
