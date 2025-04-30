@@ -117,3 +117,11 @@ int main() {
 
     return 0;
 }
+
+//Uma lista circular duplamente encadeada é uma estrutura de dados dinâmica composta 
+// por nós onde cada nó possui dois ponteiros: um que aponta para o próximo nó e outro
+// que aponta para o nó anterior. O diferencial dessa lista é que o último nó aponta 
+// de volta para o primeiro, e o primeiro aponta para o último, formando um ciclo fechado
+// nos dois sentidos (frente e trás). Isso permite percorrer a lista tanto para frente
+// quanto para trás de forma contínua, sem precisar verificar o final da lista, o que
+// facilita certas operações como inserção e remoção em ambas as extremidades.
