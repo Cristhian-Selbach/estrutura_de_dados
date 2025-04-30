@@ -98,6 +98,13 @@ int removerPosicao(Lista *lista, int posicao) {
   return valorRemovido;
 }
 
+int buscar(Lista *l, int valor) {
+  for (int i = 0; i < l->tamanho; i++) {
+    if (l->dados[i] == valor) return i;
+  }
+  return -1;
+}
+
 int main() {
   Lista l;
   int opcao;
