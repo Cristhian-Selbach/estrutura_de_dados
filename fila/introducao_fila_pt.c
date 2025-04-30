@@ -39,7 +39,7 @@ void enqueue(Fila *fila, int valor) {
 int dequeue(Fila *fila){
   if (estaVazia(fila)) {
     printf("Erro: A fila esta vazia! \n");
-    return; // Sai da função se a fila estiver vazia
+    return 0; // Sai da função se a fila estiver vazia
   }
 
   int aux = fila->elementos[fila->inicio];
